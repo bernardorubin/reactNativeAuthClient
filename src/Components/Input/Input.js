@@ -1,5 +1,7 @@
-import { TextInput, StyleSheet } from 'react-native';
+import { TextInput, StyleSheet, Dimensions } from 'react-native';
 import React, { Component } from 'react';
+
+const { width, height } = Dimensions.get('screen');
 
 class Input extends Component {
   state = {}
@@ -10,8 +12,8 @@ class Input extends Component {
 
 const styles = StyleSheet.create({
   textInput: {
-    width: "90%",
-    height: "8%",
+    width: .9 * width,
+    height: .08 * height,
     backgroundColor: "rgb(242,242,242)",
     borderRadius: 30,
     paddingLeft: "3%",
