@@ -27,6 +27,11 @@ export default class App extends Component<Props> {
       return { password: text }
     })
   }
+  handlePushScreen = () => {
+    this.props.navigator.push({
+      screen: 'client.CreateAccount',
+    });
+  }
   render() {
     return <View style={styles.container}>
         <Image source={require("../../assets/images/logo.png")} style={styles.image} />
@@ -36,7 +41,7 @@ export default class App extends Component<Props> {
         </View>
         <View style={{ alignItems: "center", height: 150, justifyContent: "space-around" }}>
           <CustomButton />
-          <TextButton />
+          <TextButton onPress={this.handlePushScreen}/>
         </View>
       </View>;
   }

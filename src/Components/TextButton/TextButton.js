@@ -5,7 +5,7 @@ class TextButton extends Component {
   state = {};
   render() {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity {...this.props}>
         <Text style={styles.textButton}>Create an Account</Text>
       </TouchableOpacity>
     );
