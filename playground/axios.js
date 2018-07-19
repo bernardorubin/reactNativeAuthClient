@@ -31,7 +31,7 @@ axios
     }
   })
   .then(response => {
-    console.log(response.status);
+    console.log(response.data);
   })
   .catch(err => {
     console.log(err);
