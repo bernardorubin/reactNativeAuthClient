@@ -8,7 +8,7 @@ class CustomButton extends Component {
   render() {
     return (
       <TouchableOpacity style={styles.buttonContainer}>
-        <Text style={styles.buttonText}>Sign In</Text>
+        <Text style={styles.buttonText}>{this.props.text}</Text>
       </TouchableOpacity>
     );
   }

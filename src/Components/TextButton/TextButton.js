@@ -6,7 +6,7 @@ class TextButton extends Component {
   render() {
     return (
       <TouchableOpacity {...this.props}>
-        <Text style={styles.textButton}>Create an Account</Text>
+        <Text style={styles.textButton}>{this.props.text}</Text>
       </TouchableOpacity>
     );
   }
@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     textDecorationStyle: 'solid',
     textDecorationColor: 'rgb(174,149,149)',
+    fontSize: 17,
   }
 });
 
