@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Image } from 'react-native';
 import Input from '../Components/Input/Input';
 import CustomButton from '../Components/Button/Button';
+import TextButton from '../Components/TextButton/TextButton';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -15,7 +16,10 @@ export default class App extends Component<Props> {
           <Input placeholder="Username" />
           <Input placeholder="Password" secureTextEntry/>
         </View>
-        <CustomButton />
+        <View style={{ alignItems: 'center', height: 150, justifyContent: 'space-around'}}>
+          <CustomButton />
+          <TextButton />
+        </View>
       </View>;
   }
 }
