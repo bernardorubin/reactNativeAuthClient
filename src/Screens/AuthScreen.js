@@ -4,8 +4,7 @@ import Input from '../Components/Input/Input';
 import CustomButton from '../Components/Button/Button';
 import TextButton from '../Components/TextButton/TextButton';
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   static navigatorStyle = {
     navBarHidden: true,
   }
