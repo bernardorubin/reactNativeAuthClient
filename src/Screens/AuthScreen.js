@@ -3,6 +3,7 @@ import { StyleSheet, View, Image } from 'react-native';
 import Input from '../Components/Input/Input';
 import CustomButton from '../Components/Button/Button';
 import TextButton from '../Components/TextButton/TextButton';
+import startPrivate from './StartPrivateScreen';
 import axios from 'axios';
 
 export default class App extends Component {
@@ -40,7 +41,7 @@ export default class App extends Component {
         username,
         password
       }).then((res) => {
-        alert('Success!!')
+        startPrivate();
       }).catch(err => {
         alert(`Wrong Username or password, here's your error -> ${err}` );
       })
