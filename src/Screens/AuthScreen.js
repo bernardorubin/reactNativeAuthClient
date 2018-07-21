@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, AsyncStorage } from 'react-native';
 import Input from '../Components/Input/Input';
 import CustomButton from '../Components/Button/Button';
 import TextButton from '../Components/TextButton/TextButton';
@@ -41,7 +41,19 @@ export default class App extends Component {
         username,
         password
       }).then((res) => {
-        startPrivate();
+        try {
+          const token = res.headers['x-auth'];
+          if (token) {
+            AsyncStorage.setItem('x-auth', token)
+            .then(() => {
+              startPrivate();
+            }).catch(() => {
+              alert('Error');
+            })
+          }
+        } catch (error) {
+          alert('Error');
+        }
       }).catch(err => {
         alert(`Wrong Username or password, here's your error -> ${err}` );
       })
