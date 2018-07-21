@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 
 //shortcut ccs
 class PrivateScreen extends Component {
-  state = {};
+  static navigatorStyle = {
+    navBarHidden: true,
+  }
   handleLogout = () => {
     AsyncStorage.removeItem('x-auth').then(() => {
       return startAuth();
@@ -15,7 +17,7 @@ class PrivateScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>This is a Private View</Text>
+        <Text style={styles.message}>Private View</Text>
         <TouchableOpacity style={styles.buttonContainer} onPress={this.handleLogout}>
           <Text style={styles.buttonText}>Log Out</Text>
         </TouchableOpacity>
@@ -28,18 +30,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    padding: 20,
+    backgroundColor: 'rgb(255,82,76)',
   },
   buttonContainer: {
     height: '8%',
     width: '90%',
     backgroundColor: 'orange',
-    borderRadius: 15,
+    borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center',
+    borderColor: 'white',
+    borderWidth: 1,
   },
   buttonText: {
-    fontSize: 22,
+    fontSize: 34,
     color: 'white',
+  },
+  message: {
+    color: 'white',
+    fontSize: 43,
+    marginBottom: '20%',
+    marginTop: '15%',
   }
 })
 
