@@ -32,6 +32,12 @@ axios
   })
   .then(response => {
     console.log(response.data);
+    // returns and logs ->
+    // {
+    //   message: 'This is a secret ROUTE',
+    //     secret: 'You may pass',
+    //       _id: '5b503179a49e0c0688ae3904'
+    // }
   })
   .catch(err => {
     console.log(err);
