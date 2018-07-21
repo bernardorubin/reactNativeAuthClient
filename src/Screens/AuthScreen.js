@@ -3,7 +3,7 @@ import { StyleSheet, View, Image, AsyncStorage } from 'react-native';
 import Input from '../Components/Input/Input';
 import CustomButton from '../Components/Button/Button';
 import TextButton from '../Components/TextButton/TextButton';
-import startPrivate from './StartPrivateScreen';
+import startPrivate from './startPrivateScreen';
 import axios from 'axios';
 
 export default class App extends Component {
